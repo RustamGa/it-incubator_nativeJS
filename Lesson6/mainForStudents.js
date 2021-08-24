@@ -176,6 +176,7 @@ const addFriends = (students) => {
     return students.map(s => ({...s, friends: studentsNames.filter(n => s.name !== n)}))
 }
 console.log(addFriends(students))
+
      // if (st.name === s.name) {
 //          return {}
 // }
