@@ -17,63 +17,18 @@ for (let j = 0; j < arr.length - 1; j++) {
             arr [i] = temp
         }
     }
+}
+console.log(arr)
 
-    const arr = [12, 34, 777, 0, 42, 56, 10]
-    for (let j = 0; j < arr.length - 1; j++) {
-        for (let i = 0; i < arr.length - 1 - j; i++) {
-            if (arr[i] > arr[i + 1]) {
-                [arr[1], arr [i + 1]] = [arr [i + 1], arr [i]]/// Деструктурирующее присваивание https://tproger.ru/s3/uploads/2017/09/BubbleSort.gif
-            }
-
-        console.log(arr)
-
-
-        // sort
-
-        const names = ["Camilla", "Bob", "Donald", "Alex"]
-        console.log(names.sort())
-
-        const numbers = [1, 1000, 3, 9]
-        const compareFn = (a, b) => {
-        }
-
-    console.log(numbers.sort())
-
-            const students = [
-                {
-                    name: "Bob",
-                    age: 22,
-                    isMarried: true,
-                    scores: 95
-                },
-                {
-                    name: "Alex",
-                    age: 23,
-                    isMarried: true,
-                    scores: 89
-                },
-                {
-                    name: "alex",
-                    age: 23,
-                    isMarried: true,
-                    scores: 89
-                },
-                {
-                    name: "Helge",
-                    age: 21,
-                    isMarried: true,
-                    scores: 89
-                },
-                {
-                    name: "Nick",
-                    age: 20,
-                    isMarried: false,
-                    scores: 120
-                },
-                {
-                    name: "John",
-                    age: 19,
-                    isMarried: false,
-                    scores: 121
-                },
-            ];
+const immutableSort = (arr) => {
+    const copy = [...arr]
+    const result =[]
+    for (let i = 0; i < arr.lengh; i++) {
+        const max = Math.max(...copy)
+        const index = copy.indexOf(max)
+            copy.splice(index,1)
+        result.unshift(max)
+    }
+    return result
+}
+console.log(immutableSort(arr))
