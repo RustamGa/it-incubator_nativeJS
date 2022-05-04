@@ -81,7 +81,6 @@ const CurrencyEContainer: React.FC = () => {
     const changeCurrentCurrency = (e: React.MouseEvent<HTMLLIElement>) => {
         e.currentTarget.dataset.currency && dispatch(СhangeCurrentCurrencyAC(e.currentTarget.dataset.currency));
     };
-
     return (
         <React.Fragment>
             <CurrencyExchange //презентационная компонента
